@@ -3,15 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "react-native run-android --no-jetifier",
+    "ios": "react-native run-ios --simulator \"iPhone 8\"",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-native-community/netinfo": "^5.8.0",
+    "amazon-cognito-identity-js": "^4.2.3",
+    "aws-amplify": "^3.0.10",
+    "aws-amplify-react-native": "^4.1.1",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

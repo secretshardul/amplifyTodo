@@ -1,0 +1,15 @@
+{
+    "auth": {
+        "amplifytodo43d9547443d95474": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": []
+        },
+        "amplifytodoe6cbd0e7": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "customAuth": false
+        }
+    }
+}

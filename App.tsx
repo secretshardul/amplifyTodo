@@ -1,24 +1,38 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 
-declare const global: {HermesInternal: null | {}};
+// import {withAuthenticator, withOAuth, Authenticator} from 'aws-amplify-react-native';
+import {Authenticator} from 'aws-amplify-react-native';
+import {Auth} from 'aws-amplify';
 
 const App = () => {
   return (
     <View>
       <Text>My app</Text>
+      <Button
+        title="gg"
+        onPress={() => {
+          Auth.federatedSignIn({provider: 'Google'});
+        }}
+      />
     </View>
   );
 };
 
-export default App;
+// export default withOAuth(App);
+
+// export default withAuthenticator(App, {
+//   includeGreetings: true,
+// });
+
+// export default App;
+
+const AppWithAuth = () => {
+  return (
+    <Authenticator>
+      <App />
+    </Authenticator>
+  );
+};
+
+export default AppWithAuth;
